@@ -1,0 +1,95 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="220dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_00"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:id="@+id/btn_01"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:id="@+id/btn_02"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:id="@+id/btn_10"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="onClick"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:id="@+id/btn_11"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:id="@+id/btn_12"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:id="@+id/btn_20"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:id="@+id/btn_21"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:id="@+id/btn_22"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left|top" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="165dp"
+        android:onClick="onClickReset"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
