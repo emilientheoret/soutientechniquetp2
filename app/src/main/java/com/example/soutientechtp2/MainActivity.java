@@ -97,18 +97,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
             }
         }
-        if(win('x') || win('o')) {
+        if(win('x') || win('o'))
             Toast.makeText(getApplicationContext(), winner, Toast.LENGTH_SHORT).show();
-            btn_00.setEnabled(false);
-            btn_01.setEnabled(false);
-            btn_02.setEnabled(false);
-            btn_10.setEnabled(false);
-            btn_11.setEnabled(false);
-            btn_12.setEnabled(false);
-            btn_20.setEnabled(false);
-            btn_21.setEnabled(false);
-            btn_22.setEnabled(false);
-        }
     }
 
     private void init(){
