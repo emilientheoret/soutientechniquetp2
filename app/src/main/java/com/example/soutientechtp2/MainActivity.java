@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        init();
 
         btn_00.setOnClickListener(this);
         btn_01.setOnClickListener(this);
@@ -96,8 +97,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
             }
         }
-        if(win('x') || win('o'))
-            Toast.makeText(getApplicationContext(), winner, Toast.LENGTH_SHORT);
+        if(win('x') || win('o')) {
+            Toast.makeText(getApplicationContext(), winner, Toast.LENGTH_SHORT).show();
+            btn_00.setEnabled(false);
+            btn_01.setEnabled(false);
+            btn_02.setEnabled(false);
+            btn_10.setEnabled(false);
+            btn_11.setEnabled(false);
+            btn_12.setEnabled(false);
+            btn_20.setEnabled(false);
+            btn_21.setEnabled(false);
+            btn_22.setEnabled(false);
+        }
     }
 
     private void init(){
@@ -128,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 index++;
                 clics++;
             } else {
-                Toast.makeText(getApplicationContext(), "DEJA CLIQUER", Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(), "DEJA CLIQUER", Toast.LENGTH_SHORT).show();
             }
         } else {
             if(!isAlreadyClicked(table[col])) {
@@ -137,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 index--;
                 clics++;
             } else {
-                Toast.makeText(getApplicationContext(), "DEJA CLIQUER", Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(), "DEJA CLIQUER", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -181,6 +192,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             for (int i= 0; i < 8; i++) {
                 if (table[win[i][0]] == value && table[win[i][1]]== value && table[win[i][2]]== value) {
                     winner = msgWin;
+                    return true;
                 }
             }
 
